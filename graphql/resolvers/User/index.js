@@ -41,7 +41,7 @@ export default {
     },
     deleteUser: (root, args) => {
       return new Promise((resolve, reject) => {
-        User.findOneAndRemove(args).exec((err, res) => {
+        User.findOneAndDelete(args).exec((err, res) => {
           err ? reject(err) : resolve(res)
         })
       })
